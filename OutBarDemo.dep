@@ -1,0 +1,144 @@
+# Microsoft Developer Studio Generated Dependency File, included by OutBarDemo.mak
+
+.\EdhjSet.cpp : \
+	".\EdhjSet.h"\
+	".\OutBarDemo.h"\
+	".\OutBarDemo_i.h"\
+	".\StdAfx.h"\
+	
+
+.\GfxGroupEdit.cpp : \
+	".\GfxGroupEdit.h"\
+	".\GfxOutBarCtrl.h"\
+	".\OutBarDemo.h"\
+	".\OutBarDemo_i.h"\
+	".\StdAfx.h"\
+	
+
+.\GfxOutBarCtrl.cpp : \
+	".\GfxGroupEdit.h"\
+	".\GfxOutBarCtrl.h"\
+	".\GfxPopupMenu.h"\
+	".\GfxSplitterWnd.h"\
+	".\MainFrm.h"\
+	".\MyTreeCtrl.h"\
+	".\StdAfx.h"\
+	
+
+.\GfxPopupMenu.cpp : \
+	".\GfxPopupMenu.h"\
+	".\OutBarDemo.h"\
+	".\OutBarDemo_i.h"\
+	".\StdAfx.h"\
+	
+
+.\GfxSplitterWnd.cpp : \
+	".\GfxSplitterWnd.h"\
+	".\OutBarDemo.h"\
+	".\OutBarDemo_i.h"\
+	".\StdAfx.h"\
+	
+
+.\GlobalDoc.cpp : \
+	".\GfxOutBarCtrl.h"\
+	".\GfxSplitterWnd.h"\
+	".\GlobalDoc.h"\
+	".\MainFrm.h"\
+	".\MyTreeCtrl.h"\
+	".\OutBarDemo.h"\
+	".\OutBarDemo_i.h"\
+	".\Setting.h"\
+	".\Splash.h"\
+	".\StdAfx.h"\
+	
+
+.\MainFrm.cpp : \
+	".\EdhjSet.h"\
+	".\GfxOutBarCtrl.h"\
+	".\GfxSplitterWnd.h"\
+	".\GlobalDoc.h"\
+	".\MainFrm.h"\
+	".\MyTreeCtrl.h"\
+	".\OutBarDemo.h"\
+	".\OutBarDemo_i.h"\
+	".\Setting.h"\
+	".\Splash.h"\
+	".\StdAfx.h"\
+	".\TestView1.h"\
+	".\UpEx.h"\
+	
+
+.\MyTreeCtrl.cpp : \
+	".\GfxOutBarCtrl.h"\
+	".\GfxSplitterWnd.h"\
+	".\MainFrm.h"\
+	".\MyTreeCtrl.h"\
+	".\OutBarDemo.h"\
+	".\OutBarDemo_i.h"\
+	".\StdAfx.h"\
+	
+
+.\OutBarDemo.cpp : \
+	".\EdhjSet.h"\
+	".\GfxOutBarCtrl.h"\
+	".\GfxSplitterWnd.h"\
+	".\GlobalDoc.h"\
+	".\MainFrm.h"\
+	".\MyTreeCtrl.h"\
+	".\OutBarDemo.h"\
+	".\OutBarDemo_i.c"\
+	".\OutBarDemo_i.h"\
+	".\Splash.h"\
+	".\StdAfx.h"\
+	".\TestView1.h"\
+	
+
+.\OutBarDemo.rc : \
+	".\OutBarDemo.rgs"\
+	".\res\cursor1.cur"\
+	".\res\dragging.cur"\
+	".\res\GlobalDoc.ico"\
+	".\res\html1.htm"\
+	".\res\icon1.ico"\
+	".\res\icr_hand.cur"\
+	".\res\imageList.bmp"\
+	".\res\MSN.ICO"\
+	".\res\nodraggi.cur"\
+	".\res\OutBarDemo.rc2"\
+	".\res\Toolbar.bmp"\
+	".\res\treeImageList.bmp"\
+	".\resource.hm"\
+	".\s.bmp"\
+	
+
+.\Setting.cpp : \
+	".\OutBarDemo.h"\
+	".\OutBarDemo_i.h"\
+	".\Setting.h"\
+	".\StdAfx.h"\
+	
+
+.\Splash.cpp : \
+	".\Splash.h"\
+	".\StdAfx.h"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	
+
+.\TestView1.cpp : \
+	".\GlobalDoc.h"\
+	".\OutBarDemo.h"\
+	".\OutBarDemo_i.h"\
+	".\Setting.h"\
+	".\StdAfx.h"\
+	".\TestView1.h"\
+	
+
+.\UpEx.cpp : \
+	".\OutBarDemo.h"\
+	".\OutBarDemo_i.h"\
+	".\StdAfx.h"\
+	".\UpEx.h"\
+	

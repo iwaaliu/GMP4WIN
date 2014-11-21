@@ -1,0 +1,88 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Developer Studio">
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Demo Outlook UI</TITLE>
+</HEAD>
+
+<FONT FACE = "Verdana, Arial, Helvetica" SIZE = 2>
+<BODY BGCOLOR="WHITE">
+
+<!-- Insert HTML here -->
+<H2><FONT COLOR="DARKBLUE">What's New...</FONT></H2><HR>
+
+The CJLibrary now supports both Visual C++ 5 as well as 
+Visual C++ 6. Enhanced code encapsulates the functionality of the new MFC classes 
+introduced with VC 6, and extends them to VC 5 users! Several new controls have been 
+added to the CLibrary since the release of 6.07. Here is an overview of the classes 
+that are found in the CJLibrary 6.08 release...</P><HR>
+
+<UL>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJBrowseEdit</STRONG></FONT> - A CEdit derived class which has a push button associated with it. It can be used to search for directories, files or activate a popup menu.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJBrowseButton</STRONG></FONT> - A CButton derived class which is used by the CCJBrowseEdit class.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJCaption</STRONG></FONT> - A a CStatic derived class which is simular to the caption or info bars that are seen in Microsoft Outlook.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJCaptionButton</STRONG></FONT> - A CCJFlatButton derived class which is used by the CCJCaption class to activate a CCJCaptionPopupWnd window.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJCaptionPopupWnd</STRONG></FONT> - A CWnd derived class which is used by the CCJCaption class to display a popup child window simular to Outlook.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJColorPicker</STRONG></FONT> - A CButton derived class which displays a color selection popup window.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJColorPopup</STRONG></FONT> - A CWnd derived class which is activated by the CCJColorPicker class.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJComboBoxEx</STRONG></FONT> - Extends the combo box control by providing support for image lists. By using CCJComboBoxEx to create combo box controls, you no longer need to implement your own image drawing code. Instead, use CCJComboBoxEx to access images from an image list.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJControlBar</STRONG></FONT> - A CControlBar derived class which is simular to the sizing / docking windows that are seen in Developer Studio.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJCBarButton</STRONG></FONT> - A CCJFlatButton derived class which is used by the CCJControlBar class.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJDateTimeCtrl</STRONG></FONT> - Encapsulates the functionality of a date and time picker control. The date and time picker control (DTP control) provides a simple interface to exchange date and time information with a user. This interface contains fields, each of which displays a part of the date and time information stored in the control. The user can change the information stored in the control by changing the content of the string in a given field. The user can move from field to field using the mouse or the keyboard.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJDockBar</STRONG></FONT> - A CDockBar derived class used by CCJFrameWnd and CCJMDIFrameWnd to offset CCJToolBars to allow 3D borders.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJDockContext</STRONG></FONT> - A CDockContext derived class which is used by CCJControlBar and CCJMiniDockFrameWnd for docking / sizing control bars.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJExplorerBar</STRONG></FONT> - A CCJControlBar derived class which is simular to the explorer bar that is seen in Windows or Internet Explorer.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJFlatButton</STRONG></FONT> - A CButton derived class used to create flat buttons. This class can only be used with the BS_OWNERDRAW style bit set.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJFlatComboBox</STRONG></FONT> - A CComboBox derived class which is simular to the flat combobox as seen in the Microsoft office products.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJFlatHeaderCtrl</STRONG></FONT> - A CHeaderCtrl derived class which is simular to the listbox flat header controls seen in Visual Studio and Outlook.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJFlatSplitterWnd</STRONG></FONT> - A CSplitterWnd derived class which adds the ability to hide and show splitter panes, based upon its index, and to draw flat splitter windows simular to Oultook.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJFlatTabCtrl</STRONG></FONT> - A CWnd derived class which is used to create a flat tab control simular to DevStudio.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJMetaFileButton</STRONG></FONT> - A CButton derived class which is used by the CCJFlatTabCtrl class.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJFrameWnd</STRONG></FONT> - A CFrameWnd derived class which is used to reposition toolbar layout for 3D effect, in addition to docking methods for CCJToolBar and CCJControlBar class.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJMDIFrameWnd</STRONG></FONT> - A CMDIFrameWnd derived class which is used to reposition toolbar layout for 3D effect, in addition to docking methods for CCJToolBar and CCJControlBar class.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJMDIChildWnd</STRONG></FONT> - Provides the functionality of a Windows multiple document interface (MDI) child window, along with members for managing the window. This class extends the standard CMDIChildWnd class to allow CCJControlBar and CCJToolBar docking.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJHtmlView</STRONG></FONT> - Provides the functionality of the WebBrowser control within the context of MFC's document/view architecture. The WebBrowser control is a window in which the user can browse sites on the World Wide Web, as well as folders in the local file system and on a network. The WebBrowser control supports hyperlinking, Uniform Resource Locator (URL) navigation, and maintains a history list.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJHyperLink</STRONG></FONT> - A CStatic derived classc will open the default browser with the given URL when the user clicks on the link.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJListCtrl</STRONG></FONT> - A CListCtrl derived class which implements a flat header and generic sorting routines.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJListView</STRONG></FONT> - A CListView derived class which implements a flat header and generic sorting routines.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJMaskEdit</STRONG></FONT> - A CEdit derived class which allows text masking to be applied to the control to format it for special editing restrictions.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJDateEdit</STRONG></FONT> - A CCJMaskEdit derived class which is specifically geared toward editing date fields.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJTimeEdit</STRONG></FONT> - A CCJDateEdit derived class which is specifically geared toward editing time fields.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJMenu</STRONG></FONT> - A CMenu derived class which implements "cool" menus with icons.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJMenuData</STRONG></FONT> - Used by the CCJMenu class to define a single menu item.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJMenuBar</STRONG></FONT> - Implements an Office style menu bar. Currently only implemented for SDI interface.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJMenuBarFrameHook</STRONG></FONT> - Used by CCJMenuBar to intercept messages on behalf of its owning frame, as well as the MDI client window.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJMiniDockFrameWnd</STRONG></FONT> - A CMiniDockFrameWnd class which is used to handle docking for the CCJControlBar class.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJMonthCalCtrl</STRONG></FONT> - Encapsulates the functionality of a month calendar control. The month calendar control provides the user with a simple calendar interface, from which the user can select a date.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CJOutlookBar</STRONG></FONT> - A CListBox derived class which simulates a control simular to the Outlook bar as seen in Outlook, can only be used with the LBS_OWNERDRAWVARIABLE style bit set. very generic.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJPagerCtrl</STRONG></FONT> - A CWnd derived class which wraps the windows Pager common control.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJReBar</STRONG></FONT> - A control bar that provides layout, persistence, and state information for rebar controls.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJReBarCtrl</STRONG></FONT> - Encapsulates the functionality of a rebar control, which is a container for a child window. The application in which the rebar control resides assigns the child window contained by the rebar control to the rebar band. The child window is usually another common control.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJShell</STRONG></FONT> -  Used to perform shell file operations.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJShellList</STRONG></FONT> - A CCJListCtrl derived class which is used to display system files and folders, typically associated with a CCJShellTree object.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJShellTree</STRONG></FONT> - A CTreeCtrl derived class which is used to display system files and folders, typically associated with a CCJShellList object.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJSizeDockBar</STRONG></FONT> - A CDockBar derived class which is used by the framework to handle CCJControlBar's.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJSortClass</STRONG></FONT> - This class will sort a List control by a column of text, integer, float or date/time type. It could be easily extended for other data types.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJTabCtrl</STRONG></FONT> - A CTabCtrl derived class which is used by CCJTabCtrl to help fix problems with repainting in the tab control.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJTabCtrlBar</STRONG></FONT> - A CCJControl bar derived class which implements a tabbed window simular to VisualStudio's workspace window.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJTabView</STRONG></FONT> - A CCtrlView derived class which can be used to create a view that contains a tab control.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJToolBar</STRONG></FONT> - A CCJToolBarBase derived class which Allows the creation of toolbars simular to VisualStudio, Microsoft Office or Internet Explorer.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJToolBarBase</STRONG></FONT> - A CControlBar derived class whis is used by the CCJToolBar class.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJToolBarCtrl</STRONG></FONT> - Provides the functionality of the Windows toolbar common control. This control (and therefore the CToolBarCtrl class) is available only to programs running under Windows 95 and Windows NT version 3.51 and later.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CToolCmdUI</STRONG></FONT> - CCJToolBar idle update through CToolCmdUI class</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CCJWindowPlacement</STRONG></FONT> - A WINDOWPLACEMENT derived class which is used to save and restore your applications window position.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CContentItems</STRONG></FONT> - A utility class used as a Container for CJOutlookBar menu items.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CGfxGroupEdit</STRONG></FONT> - A CEdit derived class used by CGfxOutBarCtl for editing menu labels.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CGfxOutBarCtrl</STRONG></FONT> - A CWnd derived class which implements a folder bar control simular to Outlook.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CGfxSplitterWnd</STRONG></FONT> - A CSplitterWnd derived class used by CGfxOutBarCtrl.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CSubclassWnd</STRONG></FONT> - Generic class to hook messages on behalf of a CWnd. Once hooked, all messages go to CSubclassWnd::WindowProc before going to the window. Specific subclasses can trap messages and do something.</LI><BR><BR>
+	<LI><STRONG><FONT COLOR="DARKBLUE">CSubclassWndMap</STRONG></FONT> - The message hook map is derived from CMapPtrToPtr, which associates a pointer with another pointer. It maps an HWND to a CSubclassWnd, like the way MFC's internal maps map HWND's to CWnd's. The first CSubclassWnd attached to a window is stored in the map; all other CSubclassWnd's for that window are then chained via CSubclassWnd::m_pNext.</LI><BR><BR>
+</UL></p><HR>
+
+<FONT SIZE="1" FACE="Verdana, Arial, Helvetica">
+Copyright © 1998-99 Kirk W. Stowell, All Rights Reserved<BR>
+<A HREF="mailto:kstowell@codejockeys.com">Email</A> | 
+<A HREF="http://www.codejockeys.com/kstowell/">Home Page</A></FONT>
+
+</BODY></FONT>
+</HTML>

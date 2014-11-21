@@ -1,0 +1,91 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: OutBarDemo - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\piao\LOCALS~1\Temp\RSPF8.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/OutBarDemo.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+"G:\iwaa\OutBarDemo0430\OutBarDemo\MainFrm.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\piao\LOCALS~1\Temp\RSPF8.tmp" 
+Creating temporary file "C:\DOCUME~1\piao\LOCALS~1\Temp\RSPF9.tmp" with contents
+[
+GMTDLL.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/OutBarDemo.pdb" /debug /machine:I386 /out:"Debug/OutBarDemo.exe" /pdbtype:sept 
+.\Debug\AbnormalCacu.obj
+.\Debug\EdhjSet.obj
+.\Debug\Flash.obj
+.\Debug\GfxGroupEdit.obj
+.\Debug\GfxOutBarCtrl.obj
+.\Debug\GfxPopupMenu.obj
+.\Debug\GfxSplitterWnd.obj
+.\Debug\GlobalDoc.obj
+.\Debug\GravityQt.obj
+.\Debug\MainFrm.obj
+.\Debug\MyDlg.obj
+.\Debug\MyTreeCtrl.obj
+.\Debug\Notice.obj
+.\Debug\OutBarDemo.obj
+.\Debug\PreTrim.obj
+.\Debug\Rdyh.obj
+.\Debug\Rdyt.obj
+.\Debug\Setting.obj
+.\Debug\SmoothSet.obj
+.\Debug\Splash.obj
+.\Debug\StaticTest.obj
+.\Debug\StdAfx.obj
+.\Debug\SuffGrap.obj
+.\Debug\TestView1.obj
+.\Debug\ThrOp.obj
+.\Debug\UpEx.obj
+.\Debug\OutBarDemo.res
+]
+Creating command line "link.exe @C:\DOCUME~1\piao\LOCALS~1\Temp\RSPF9.tmp"
+<h3>Output Window</h3>
+Compiling...
+MainFrm.cpp
+Linking...
+LINK : LNK6004: Debug/OutBarDemo.exe not found or not built by the last incremental link; performing full link
+Creating temporary file "C:\DOCUME~1\piao\LOCALS~1\Temp\RSPFB.tmp" with contents
+[
+/nologo /o"Debug/OutBarDemo.bsc" 
+.\Debug\StdAfx.sbr
+.\Debug\AbnormalCacu.sbr
+.\Debug\EdhjSet.sbr
+.\Debug\Flash.sbr
+.\Debug\GfxGroupEdit.sbr
+.\Debug\GfxOutBarCtrl.sbr
+.\Debug\GfxPopupMenu.sbr
+.\Debug\GfxSplitterWnd.sbr
+.\Debug\GlobalDoc.sbr
+.\Debug\GravityQt.sbr
+.\Debug\MainFrm.sbr
+.\Debug\MyDlg.sbr
+.\Debug\MyTreeCtrl.sbr
+.\Debug\Notice.sbr
+.\Debug\OutBarDemo.sbr
+.\Debug\PreTrim.sbr
+.\Debug\Rdyh.sbr
+.\Debug\Rdyt.sbr
+.\Debug\Setting.sbr
+.\Debug\SmoothSet.sbr
+.\Debug\Splash.sbr
+.\Debug\StaticTest.sbr
+.\Debug\SuffGrap.sbr
+.\Debug\TestView1.sbr
+.\Debug\ThrOp.sbr
+.\Debug\UpEx.sbr]
+Creating command line "bscmake.exe @C:\DOCUME~1\piao\LOCALS~1\Temp\RSPFB.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+OutBarDemo.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

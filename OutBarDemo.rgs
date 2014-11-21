@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{68A969DB-5D8A-4474-8670-9E3C81E73C7B} = s 'OutBarDemo'
+		'OutBarDemo.EXE'
+		{
+			val AppID = s {68A969DB-5D8A-4474-8670-9E3C81E73C7B}
+		}
+	}
+}

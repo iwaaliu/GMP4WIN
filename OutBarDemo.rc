@@ -1,0 +1,1142 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SPLASH              BITMAP  DISCARDABLE     "s.bmp"
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+IDB_IMAGELIST           BITMAP  DISCARDABLE     "res\\imageList.bmp"
+IDB_SMALL_IMAGELIST     BITMAP  DISCARDABLE     "res\\treeImageList.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_DRAW MENU DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "&New",                        ID_FILE_NEW
+        MENUITEM "&Open",                       ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "&Save",                       ID_FILE_SAVE
+        MENUITEM "Sa&ve as",                    ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_MENUITEM32774
+    END
+    MENUITEM "编辑(&E)",                    65535
+    MENUITEM "查看(&V)",                    65535
+    MENUITEM "窗口(&W)",                    65535
+    MENUITEM "帮助(&H)",                    65535
+END
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open\tCtrl+O",               ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "S&ave as",                    ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print\tCtrl+P",              ID_FILE_PRINT
+        MENUITEM "Print &review",               ID_FILE_PRINT_PREVIEW
+        MENUITEM "Print set&up",                ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "&Exit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "&Cut\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "C&opy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Tool bar",                   ID_VIEW_TOOLBAR, CHECKED
+        MENUITEM "&Status bar",                 ID_VIEW_STATUS_BAR, CHECKED
+        MENUITEM "TITLE",                       ID_TITLE
+    END
+    POPUP "&Gravity"
+    BEGIN
+        POPUP "仪器性能试验"
+        BEGIN
+            MENUITEM "静态试验",                    ID_STATIC_TEST
+            POPUP "动态试验", HELP
+            BEGIN
+                MENUITEM "两点动态试验",                ID_DYNAMIC_TWO
+                MENUITEM "多点动态试验",                ID_DYNAMIC_MULTI
+            END
+            MENUITEM "仪器一致性试验",              ID_COHERENCE_TEST
+            MENUITEM "仪器格值校正",                ID_VALUE_RIVISE
+        END
+        MENUITEM SEPARATOR
+        POPUP "资料整理"
+        BEGIN
+            MENUITEM "初步整理",                    ID_PRE_TRIM
+            MENUITEM "异常计算",                    ID_ABNORMAL_CACU
+        END
+        POPUP "资料处理"
+        BEGIN
+            POPUP "延拓"
+            BEGIN
+                POPUP "二度延拓"
+                BEGIN
+                    MENUITEM "上延",                        ID_UP_EXTEND2
+                    MENUITEM "下延",                        ID_DOWN_EXTEND2
+                END
+                POPUP "三度延拓"
+                BEGIN
+                    MENUITEM "上延",                        ID_UP_EXTEND3
+                    MENUITEM "下延",                        ID_DOWN_EXTEND3
+                END
+            END
+            POPUP "导数"
+            BEGIN
+                POPUP "二度体"
+                BEGIN
+                    MENUITEM "Vxz",                         ID_VXZ2
+                    MENUITEM "Vzz",                         ID_VZZ2
+                    MENUITEM "Vzzz",                        ID_VZZZ2
+                END
+                POPUP "三度体"
+                BEGIN
+                    MENUITEM "Vxz",                         ID_VXZ3
+                    MENUITEM "Vzz",                         ID_VZZ3
+                    MENUITEM "Vzzz",                        ID_VZZZ3
+                END
+            END
+        END
+        MENUITEM SEPARATOR
+        POPUP "正演计算"
+        BEGIN
+            MENUITEM "球体",                        ID_GRAVITY_QT
+            MENUITEM "地堑",                        ID_DIQIAN
+        END
+    END
+    POPUP "&Magnetic"
+    BEGIN
+        MENUITEM "回放",                        ID_DATA_REVIEW
+        MENUITEM SEPARATOR
+        MENUITEM "资料整理",                    65535
+        POPUP "资料处理"
+        BEGIN
+            MENUITEM "二度化极",                    ID_EDHJ
+            MENUITEM "三分量程序",                  ID_THREE_OP
+        END
+        MENUITEM SEPARATOR
+        POPUP "正演"
+        BEGIN
+            MENUITEM "球体",                        ID_QT
+            MENUITEM "BZT",                         ID_BZT
+        END
+    END
+    POPUP "&Others"
+    BEGIN
+        MENUITEM "&GRAPHER",                    ID_GRAPHER_DRAW
+        MENUITEM "&SUFFER",                     ID_SUFFER_DRAW, HELP
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About",                      ID_APP_ABOUT
+        MENUITEM "&Help",                       IDHELP
+        MENUITEM "注意事项(&N)",                ID_NOTICE
+    END
+    POPUP "F&ileOpen"
+    BEGIN
+        MENUITEM "MY&FILEOPEN",                 ID_MY_FILE_OPEN
+        MENUITEM "MY&DRAW",                     ID_MYDRAW
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\MSN.ICO"
+IDR_OUTBARTYPE          ICON    DISCARDABLE     "res\\GlobalDoc.ico"
+IDI_STAMP               ICON    DISCARDABLE     "res\\MAIL18.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  18, 19
+BEGIN
+    BUTTON      ID_GFX_LARGEICON
+    BUTTON      ID_GFX_SMALLICON
+    SEPARATOR
+    BUTTON      ID_THREE_OP
+    BUTTON      ID_ABNORMAL_CACU
+    BUTTON      ID_SUFFER_DRAW
+    SEPARATOR
+    BUTTON      ID_DRAW_LINE
+    BUTTON      ID_DRAW_EL
+    BUTTON      ID_DRAW_RE
+    BUTTON      ID_POINTER
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "A",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 219, 56
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于GMP4WIN"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_OUTBARTYPE,IDC_STATIC,11,17,20,20
+    LTEXT           "地球物理重磁数据整理与处理 Version 1.0.0.1",IDC_STATIC,
+                    40,10,119,22,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2004",IDC_STATIC,37,32,119,8
+    DEFPUSHBUTTON   "OK",IDOK,179,7,32,14,WS_GROUP
+END
+
+IDD_SETTING DIALOGEX 0, 0, 257, 162
+STYLE DS_SYSMODAL | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "球体正演计算"
+FONT 12, "楷体_GB2312", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT1,64,26,30,14,ES_AUTOHSCROLL,WS_EX_TRANSPARENT | 
+                    WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT2,64,43,30,14,ES_AUTOHSCROLL,WS_EX_TRANSPARENT | 
+                    WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT3,64,61,30,14,ES_AUTOHSCROLL,WS_EX_TRANSPARENT | 
+                    WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT4,64,79,30,14,ES_AUTOHSCROLL,WS_EX_TRANSPARENT | 
+                    WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT5,64,97,30,14,ES_AUTOHSCROLL,WS_EX_TRANSPARENT | 
+                    WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT9,156,24,29,14,ES_AUTOHSCROLL,WS_EX_TRANSPARENT | 
+                    WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT10,156,42,29,14,ES_AUTOHSCROLL,WS_EX_TRANSPARENT | 
+                    WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT6,156,60,29,14,ES_AUTOHSCROLL,WS_EX_TRANSPARENT | 
+                    WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT7,156,81,29,14,ES_AUTOHSCROLL,WS_EX_TRANSPARENT | 
+                    WS_EX_RIGHT
+    COMBOBOX        IDC_COMBO1,156,100,30,55,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP,WS_EX_TRANSPARENT | 
+                    WS_EX_STATICEDGE,HIDC_COMBO1
+    EDITTEXT        IDC_EDIT8,62,132,122,14,ES_UPPERCASE | ES_AUTOHSCROLL | 
+                    ES_WANTRETURN,WS_EX_ACCEPTFILES | WS_EX_TRANSPARENT | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    DEFPUSHBUTTON   "确定(&O)",IDOK,218,105,32,14,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "取消(&C)",IDCANCEL,218,137,32,14,0,WS_EX_TRANSPARENT
+    LTEXT           "测线数",IDC_STATIC,22,29,39,8,0,WS_EX_TRANSPARENT
+    LTEXT           "测点数",IDC_STATIC,22,47,38,8,0,WS_EX_TRANSPARENT
+    LTEXT           "半径(r0)/m",IDC_STATIC,22,62,38,8,0,WS_EX_TRANSPARENT
+    LTEXT           "埋深(h)/m",IDC_STATIC,22,81,38,8,0,WS_EX_TRANSPARENT
+    LTEXT           "磁化强度(j)",IDC_STATIC,22,99,38,8,0,WS_EX_TRANSPARENT
+    LTEXT           "线距(dx)/m",IDC_STATIC,112,28,41,8,0,WS_EX_TRANSPARENT
+    LTEXT           "点距(dy)/m",IDC_STATIC,112,45,40,8,0,WS_EX_TRANSPARENT
+    LTEXT           "类型(0dt/1da)",IDC_STATIC,112,101,44,8,0,
+                    WS_EX_TRANSPARENT
+    GROUPBOX        "球体参数设置",IDC_STATIC,7,7,197,114,BS_NOTIFY | 
+                    WS_TABSTOP,WS_EX_TRANSPARENT
+    LTEXT           "结果输出为",IDC_STATIC,19,134,42,12,0,WS_EX_TRANSPARENT
+    LTEXT           "地磁倾角(a)",IDC_STATIC,112,63,41,8,SS_NOTIFY,
+                    WS_EX_TRANSPARENT
+    LTEXT           "磁方位角(ai0)",IDC_STATIC,112,83,41,8,NOT WS_GROUP,
+                    WS_EX_TRANSPARENT
+    CONTROL         "并浏览数据",IDC_OPENDATA,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,62,149,56,10,WS_EX_TRANSPARENT
+END
+
+IDD_EDHJ_SET DIALOGEX 0, 0, 226, 126
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "二度化极"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_AI,50,31,23,14,ES_AUTOHSCROLL | WS_GROUP,WS_EX_RIGHT
+    EDITTEXT        IDC_A,115,31,24,14,ES_AUTOHSCROLL | WS_GROUP,WS_EX_RIGHT
+    EDITTEXT        IDC_POINT_NUMBER,176,31,26,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    EDITTEXT        IDC_FILEIN,54,59,138,14,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_FILEOUT,54,83,139,14,ES_AUTOHSCROLL | WS_GROUP
+    CONTROL         "并打开计算结果",IDC_CHECK_EDHJ,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,9,106,72,10,WS_EX_TRANSPARENT
+    DEFPUSHBUTTON   "OK",IDOK,123,109,38,14
+    PUSHBUTTON      "Cancel",IDCANCEL,173,109,38,14
+    LTEXT           "地磁倾角",IDC_STATIC,13,34,33,8,0,WS_EX_TRANSPARENT
+    LTEXT           "磁方位角",IDC_STATIC,80,34,33,8,0,WS_EX_TRANSPARENT
+    GROUPBOX        "二度化极参数设置",IDC_STATIC,8,11,203,42,0,
+                    WS_EX_TRANSPARENT
+    LTEXT           "数据文件",IDC_STATIC,10,63,39,8,0,WS_EX_TRANSPARENT
+    LTEXT           "数据保存为",IDC_STATIC,11,86,40,8,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "...",IDC_FILEOPEN,195,59,14,14
+    PUSHBUTTON      "...",IDC_BROWSE,195,83,14,14
+    GROUPBOX        "RDHJ",IDC_STATIC,4,0,212,104,0,WS_EX_TRANSPARENT
+    LTEXT           "测点数",IDC_STATIC,145,33,25,8,0,WS_EX_TRANSPARENT
+END
+
+IDD_UP_EXTEND DIALOG DISCARDABLE  0, 0, 212, 136
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "二度延拓"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,158,105,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,158,122,50,14
+    LTEXT           "XYH 文件",IDC_STATIC,13,14,34,8
+    LTEXT           "数据输出文件",IDC_STATIC,11,35,49,8
+    LTEXT           "K",IDC_STATIC,11,55,8,8
+    CONTROL         "Check1",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,23,105,40,10
+END
+
+IDD_PRETRIM DIALOGEX 0, 0, 224, 125
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "LaCoste & Romburg重力仪观测数据初步整理"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,110,106,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,164,106,50,14
+    CONTROL         "观测数据文件",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOTIFY | WS_GROUP,8,52,49,8,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_PRETRIM_INFILE,62,50,129,14,ES_AUTOHSCROLL
+    GROUPBOX        "PRETRIM",IDC_STATIC,5,7,209,70,WS_GROUP,
+                    WS_EX_TRANSPARENT
+    PUSHBUTTON      "...",IDC_PRETRIM_OPEN,197,50,15,14
+    CONTROL         "并打开计算结果(&R)",IDC_PRETRIM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,96,81,10
+    PUSHBUTTON      "查看数据文件的格式(&C)",IDC_FILE_FORM,163,11,50,22,
+                    BS_MULTILINE,WS_EX_TRANSPARENT
+END
+
+IDD_MYDLG DIALOGEX 0, 0, 194, 131
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Vzzz3"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    LTEXT           "Static",IDC_STATIC,24,12,19,8,0,WS_EX_TRANSPARENT
+    LTEXT           "Static",IDC_STATIC,24,33,19,8,0,WS_EX_TRANSPARENT
+    LTEXT           "Static",IDC_STATIC,24,50,19,8,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "...",IDC_BUTTON1,94,10,19,14
+    EDITTEXT        IDC_EDIT1,50,9,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,50,31,40,14,ES_AUTOHSCROLL
+    CONTROL         "并打开计算结果(&R)",IDC_MYDLG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,11,105,81,10
+    DEFPUSHBUTTON   "确定(&O)",IDOK,142,87,32,14,0,WS_EX_TRANSPARENT
+    GROUPBOX        "Static",IDC_STATIC,4,1,179,66,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "取消(&C)",IDCANCEL,142,104,32,14,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "...",IDC_BUTTON2,94,31,19,14
+END
+
+IDD_ABNORMALCACU DIALOGEX 0, 0, 246, 155
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "异常计算"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Abnormal",IDC_STATIC,3,0,231,113
+    EDITTEXT        IDC_FILE_INPUT,68,7,133,14,ES_AUTOHSCROLL
+    CONTROL         "此文件为面积测量数据(&S)",IDC_XYDATA,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,51,105,10
+    CONTROL         "加入地形校正值(&A)",IDC_RIVISE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,72,80,10
+    EDITTEXT        IDC_FILE_RIVISE,91,89,110,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    CONTROL         "并打开计算结果(&R)",IDC_ABNORMALCACU,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,123,81,10
+    EDITTEXT        IDC_EDIT_FIRST,122,136,13,13,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE | WS_DISABLED,WS_EX_TRANSPARENT
+    DEFPUSHBUTTON   "&OK",IDOK,190,119,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,190,135,50,14
+    LTEXT           "输入参数文件名",IDC_STATIC,8,11,57,8,0,
+                    WS_EX_TRANSPARENT
+    LTEXT           " 输入地形校正值文件名",IDC_STATIC,7,92,83,8
+    PUSHBUTTON      "...",IDC_INPUT_OPEN,212,6,16,14
+    PUSHBUTTON      "...",IDC_RIVISE_OPEN,212,89,16,14,WS_DISABLED
+    PUSHBUTTON      "编辑参数文件",IDC_FILE_EDIT,168,27,52,14,BS_FLAT,
+                    WS_EX_TRANSPARENT
+    PUSHBUTTON      "查看文件格式",IDC_FILE_FORM,103,27,50,14,BS_FLAT,
+                    WS_EX_TRANSPARENT
+    GROUPBOX        "",IDC_STATIC,4,65,229,47
+    LTEXT           "输出文件首字母(与参数文件一致)",IDC_STATIC_1,2,137,117,
+                    8,NOT WS_VISIBLE | WS_DISABLED,WS_EX_TRANSPARENT
+END
+
+IDD_NOTICE DIALOG DISCARDABLE  0, 0, 252, 214
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+FONT 10, "System"
+BEGIN
+    LTEXT           "1.本软件版权归中国地质大学(武汉)地球物理系 和 刘爱华所有:--）\n2.由于VC自身原因,回车时是默认为确认，而不是下一控件,故请在数据输入完整后再敲回车。可以用Tab键转移焦点。\n3.",
+                    IDC_STATIC,2,8,248,51
+    LTEXT           "EXIT",IDC_STATIC1,124,204,16,8
+    LTEXT           "1.本软件版权归中国地质大学(武汉)地球物理系 和 刘爱华所有:--）\n2.由于VC自身原因,回车时是默认为确认，而不是下一控件,故请在数据输入完整后再敲回车。可以用Tab键转移焦点。\n3.",
+                    IDC_STATIC,2,59,248,75
+    LTEXT           "1.本软件版权归中国地质大学(武汉)地球物理系 和 刘爱华所有:--）\n2.由于VC自身原因,回车时是默认为确认，而不是下一控件,故请在数据输入完整后再敲回车。可以用Tab键转移焦点。\n3.",
+                    IDC_STATIC,2,134,248,67
+    GROUPBOX        "注意事项",IDC_STATIC,0,0,252,203
+END
+
+IDD_Flash DIALOG DISCARDABLE  0, 0, 156, 88
+STYLE WS_POPUP | WS_VISIBLE | WS_BORDER
+FONT 10, "System"
+BEGIN
+    LTEXT           "本程序由杨锐明友情提供,在此表示感谢.其版权归杨锐明所有.",
+                    IDC_STATIC,16,17,124,35
+    ICON            IDR_MAINFRAME,IDC_STATIC,70,56,20,20
+END
+
+IDD_RDYT_SET DIALOGEX 0, 0, 208, 150
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "二度延拓"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_RDYT_NO,57,35,32,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    COMBOBOX        IDC_RHYT_TYPE,57,18,32,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_RDYT_INFILE,57,69,120,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RDYT_OUTFILE,57,87,120,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_K,57,53,56,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "并打开计算结果(&R)",IDC_RDYT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,127,81,10
+    DEFPUSHBUTTON   "OK",IDOK,149,113,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,149,130,50,14
+    LTEXT           "测点数",IDC_STATIC,9,37,25,8,0,WS_EX_TRANSPARENT
+    LTEXT           "数据源文件",IDC_STATIC,9,72,41,8,0,WS_EX_TRANSPARENT
+    LTEXT           "结果保存为",IDC_STATIC,9,90,41,8,0,WS_EX_TRANSPARENT
+    LTEXT           "延拓类型",IDC_STATIC,9,20,33,8,0,WS_EX_TRANSPARENT
+    LTEXT           "延拓高度",IDC_STATIC,9,54,38,8,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "...",IDC_RDYT_IN,180,69,14,14
+    PUSHBUTTON      "...",IDC_RDYT_OUT,180,87,14,14
+    GROUPBOX        "RDYT",IDC_STATIC,4,7,199,100
+END
+
+IDD_RDYH_SET DIALOGEX 0, 0, 264, 115
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "二度圆滑"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,194,79,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,193,99,50,14
+    LTEXT           "要圆滑的数据文件",IDC_STATIC,6,20,65,8,0,
+                    WS_EX_TRANSPARENT
+    LTEXT           "圆滑结果输出为",IDC_STATIC,6,40,57,8,0,
+                    WS_EX_TRANSPARENT
+    LTEXT           "圆滑类型",IDC_STATIC,6,59,33,8,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_FILE_INPUT,73,18,156,14,ES_AUTOHSCROLL,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_FILE_OUTPUT,73,37,156,14,ES_AUTOHSCROLL,
+                    WS_EX_TRANSPARENT
+    COMBOBOX        IDC_TYPE,73,58,48,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP,WS_EX_TRANSPARENT
+    PUSHBUTTON      "...",IDC_INPUT_OPEN,238,18,16,14
+    PUSHBUTTON      "...",IDC_OUTPUT_OPEN,238,37,16,14
+    CONTROL         "并打开结果(&R)",IDC_CHECK_DATA,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,6,94,65,10,WS_EX_TRANSPARENT
+    GROUPBOX        "RDYH",IDC_STATIC,4,6,255,71,0,WS_EX_TRANSPARENT
+END
+
+IDD_MAG_THROP DIALOGEX 0, 0, 237, 127
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "三分量计算"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,159,92,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,159,110,50,14
+    LTEXT           "参数文件",IDC_STATIC,13,17,33,8,0,WS_EX_TRANSPARENT
+    LTEXT           "数据文件",IDC_STATIC,13,45,33,8,0,WS_EX_TRANSPARENT
+    LTEXT           "是否取为0点",IDC_STATIC,13,71,44,8,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_PARA_FILE,58,14,142,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DATA_FILE,58,43,142,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_IS_ZERO,58,68,25,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "...",IDC_PARA_OPEN,207,15,14,14
+    PUSHBUTTON      "...",IDC_DATA_OPRN,207,42,14,14
+    PUSHBUTTON      "查看参数文件格式",IDC_PARA_FORM,135,65,65,14,BS_FLAT,
+                    WS_EX_TRANSPARENT
+    GROUPBOX        "THREE",IDC_STATIC,10,6,215,80
+END
+
+IDD_STATIC_TEST DIALOGEX 0, 0, 212, 107
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "LaCoste&Romburg重力仪观测重力值计算固体潮校正值计算"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,151,72,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,151,89,50,14
+    LTEXT           "观测数据文件",IDC_STATIC,7,47,48,8,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_DATA_FILE,56,46,132,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_FILE_OPEN,191,46,14,14
+    GROUPBOX        "STATIC",IDC_STATIC,4,2,204,62,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "查看数据文件的格式(&C)",IDC_FILE_FORM,158,6,50,22,
+                    BS_MULTILINE,WS_EX_TRANSPARENT
+END
+
+IDD_SMOOTH_SET DIALOGEX 0, 0, 236, 165
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "平面圆滑"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,174,130,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,174,147,50,14
+    LTEXT           "圆滑类型",IDC_STATIC,12,13,33,8,0,WS_EX_TRANSPARENT
+    LTEXT           "输入数据",IDC_STATIC,11,29,33,8,0,WS_EX_TRANSPARENT
+    LTEXT           "输出数据",IDC_STATIC,12,48,33,8,0,WS_EX_TRANSPARENT
+    LTEXT           "线数",IDC_STATIC,12,84,17,8,0,WS_EX_TRANSPARENT
+    LTEXT           "点数",IDC_STATIC,12,103,17,8,0,WS_EX_TRANSPARENT
+    LTEXT           "输出格式",IDC_STATIC,12,66,33,8,0,WS_EX_TRANSPARENT
+    CONTROL         "并打开计算结果(&R)",IDC_DATA_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,134,81,10,
+                    WS_EX_TRANSPARENT
+    COMBOBOX        IDC_TYPE,49,11,50,65,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_FILE_INPUT,49,25,144,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FILE_OUTPUT,49,46,144,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LINE_NO,49,82,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_POINT_NO,49,100,40,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_FORM,49,64,48,63,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "...",IDC_INPUT_OPEN,201,25,14,14
+    PUSHBUTTON      "...",IDC_OUTPUT_OPEN,201,46,14,14
+    GROUPBOX        "SMOOTH",IDC_STATIC,7,3,218,124
+END
+
+IDD_SUFF_GRAP DIALOGEX 0, 0, 210, 94
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "指定链接程序"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,142,60,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,142,77,50,14
+    LTEXT           "类型",IDC_STATIC,11,16,17,8,0,WS_EX_TRANSPARENT
+    LTEXT           "路径",IDC_STATIC,11,38,17,8,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_MY_PATH,34,36,148,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_TYPE,34,14,51,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "...",IDC_OPEN,185,36,14,14
+    GROUPBOX        "SUFFER&&GAPHER",IDC_STATIC,7,4,197,54,0,
+                    WS_EX_TRANSPARENT
+END
+
+IDD_GRAVITY_QT DIALOGEX 0, 0, 216, 154
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "球体正演计算"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,147,120,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,147,137,50,14
+    LTEXT           "测线数",IDC_STATIC,12,20,25,8,0,WS_EX_TRANSPARENT
+    LTEXT           "测点数",IDC_STATIC,12,43,25,8,0,WS_EX_TRANSPARENT
+    LTEXT           "中心埋深(m)",IDC_STATIC,12,68,42,8,0,WS_EX_TRANSPARENT
+    LTEXT           "剩余质量(吨)",IDC_STATIC,109,67,45,8,0,
+                    WS_EX_TRANSPARENT
+    CONTROL         "并打开计算结果(&R)",IDC_DATA_OPEN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,133,81,10,
+                    WS_EX_TRANSPARENT
+    LTEXT           "线距(m)",IDC_STATIC,110,20,27,8,0,WS_EX_TRANSPARENT
+    LTEXT           "点距(m)",IDC_STATIC,110,43,27,8,0,WS_EX_TRANSPARENT
+    LTEXT           "结果保存为",IDC_STATIC,13,97,41,8,0,WS_EX_TRANSPARENT
+    GROUPBOX        "球体参数设置",IDC_STATIC,8,4,192,109,0,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_LINE_NO,54,16,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LINE_DIS,154,18,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_POINT_NO,54,41,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_POINT_DIS,154,41,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CENTER_DEEP,54,66,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_REST_ROU,154,66,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FILE_OUT,54,94,132,14,ES_AUTOHSCROLL
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x9L
+#else
+ FILEFLAGS 0x8L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "2004实习版\0"
+            VALUE "CompanyName", "华宇Inc\0"
+            VALUE "FileDescription", "OutBarDemo Applicazione MFC\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "GMP1.0\0"
+            VALUE "LegalCopyright", "Copyright (C) 2004\0"
+            VALUE "LegalTrademarks", "iwaa_liu\0"
+            VALUE "OriginalFilename", "GMP.EXE\0"
+            VALUE "PrivateBuild", "Iwaa_liu\0"
+            VALUE "ProductName", "重磁数据整理与处理系统\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 212
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 49
+    END
+
+    IDD_SETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 155
+    END
+
+    IDD_EDHJ_SET, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 219
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 119
+    END
+
+    IDD_UP_EXTEND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 129
+    END
+
+    IDD_PRETRIM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+
+    IDD_MYDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 187
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 124
+    END
+
+    IDD_ABNORMALCACU, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 239
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 148
+    END
+
+    IDD_NOTICE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 245
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 207
+    END
+
+    IDD_Flash, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 149
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 81
+    END
+
+    IDD_RDYT_SET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 201
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 143
+    END
+
+    IDD_RDYH_SET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 257
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 108
+    END
+
+    IDD_MAG_THROP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+    END
+
+    IDD_STATIC_TEST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 100
+    END
+
+    IDD_SMOOTH_SET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_SUFF_GRAP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_GRAVITY_QT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_HANDCUR             CURSOR  DISCARDABLE     "res\\icr_hand.cur"
+IDC_DRAGGING            CURSOR  DISCARDABLE     "res\\dragging.cur"
+IDC_NODRAGGING          CURSOR  DISCARDABLE     "res\\nodraggi.cur"
+IDC_RESIZE              CURSOR  DISCARDABLE     "res\\cursor1.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+IDR_CJWEBHTML           HTML    DISCARDABLE     "res\\html1.htm"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 16, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\OutBarDemo.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.ita\\afxres.rc""          // Standard components\r\n"
+    "#include ""l.ita\\afxprint.rc""        // printing/print preview resources\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_OUTBARDEMO          REGISTRY DISCARDABLE    "OutBarDemo.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_SETTING DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 2, 0
+0x0030, 
+    IDC_COMBO1, 0x403, 2, 0
+0x0031, 
+    0
+END
+
+IDD_RDYT_SET DLGINIT
+BEGIN
+    IDC_RHYT_TYPE, 0x403, 5, 0
+0xcfc9, 0xd3d1, "\000" 
+    IDC_RHYT_TYPE, 0x403, 5, 0
+0xc2cf, 0xd3d1, "\000" 
+    IDC_K, 0x403, 13, 0
+0xbbd2, 0xb6b1, 0xe3b5, 0xe0be, 0x3128, 0x2968, "\000" 
+    IDC_K, 0x403, 13, 0
+0xbdc1, 0xb6b1, 0xe3b5, 0xe0be, 0x3228, 0x2968, "\000" 
+    0
+END
+
+IDD_RDYH_SET DLGINIT
+BEGIN
+    IDC_TYPE, 0x403, 9, 0
+0xe5ce, 0xe3b5, 0xb2d4, 0xacbb, "\000" 
+    IDC_TYPE, 0x403, 9, 0
+0xdfc6, 0xe3b5, 0xb2d4, 0xacbb, "\000" 
+    0
+END
+
+IDD_MAG_THROP DLGINIT
+BEGIN
+    IDC_IS_ZERO, 0x403, 2, 0
+0x0059, 
+    IDC_IS_ZERO, 0x403, 2, 0
+0x004e, 
+    0
+END
+
+IDD_SMOOTH_SET DLGINIT
+BEGIN
+    IDC_TYPE, 0x403, 10, 0
+0x2020, 0xb539, 0xd4e3, 0xbbb2, 0x00ac, 
+    IDC_TYPE, 0x403, 9, 0
+0x3532, 0xe3b5, 0xb2d4, 0xacbb, "\000" 
+    IDC_TYPE, 0x403, 9, 0
+0x3934, 0xe3b5, 0xb2d4, 0xacbb, "\000" 
+    IDC_FORM, 0x403, 7, 0
+0x3031, 0x3966, 0x322e, "\000" 
+    IDC_FORM, 0x403, 7, 0
+0x3031, 0x3966, 0x332e, "\000" 
+    IDC_FORM, 0x403, 7, 0
+0x3031, 0x3866, 0x332e, "\000" 
+    IDC_FORM, 0x403, 7, 0
+0x3031, 0x3866, 0x342e, "\000" 
+    IDC_FORM, 0x403, 6, 0
+0x6638, 0x2e38, 0x0033, 
+    IDC_FORM, 0x403, 6, 0
+0x6638, 0x2e38, 0x0034, 
+    0
+END
+
+IDD_SUFF_GRAP DLGINIT
+BEGIN
+    IDC_TYPE, 0x403, 7, 0
+0x5553, 0x4646, 0x5245, "\000" 
+    IDC_TYPE, 0x403, 8, 0
+0x5247, 0x5041, 0x4548, 0x0052, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "重力&磁法数据整理与处理  版本1.0.0.1 刘爱华(06100214)\n\nOutBar\n\n\nOutBarDemo.Document\nOutBar Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Gravity & Magnet Proce"
+    AFX_IDS_IDLEMESSAGE     "就绪"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EST"
+    ID_INDICATOR_CAPS       "MA"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "BS"
+    ID_INDICATOR_OVR        "SSC"
+    ID_INDICATOR_REC        "REG"
+    ID_INDICATOR_TIME       "00:00:00"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open a document\nOpen"
+    ID_FILE_CLOSE           "Close the present document\nClose"
+    ID_FILE_SAVE            "Save the present document\nSave"
+    ID_FILE_SAVE_AS         "Save the document as a new name\nSave as"
+    ID_FILE_PAGE_SETUP      "Modifica le impostazioni di stampa\nImposta pagina"
+    ID_FILE_PRINT_SETUP     "Modifica le impostazioni relative alla stampante e alla stampa\nImposta stampante"
+    ID_FILE_PRINT           "Stampa il documento attivo\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Visualizza le pagine per intero\nAnteprima di stampa"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "关于本软件....\n关于本软件...."
+    ID_APP_EXIT             "Esce dall'applicazione e chiede di salvare i documenti\nEsci"
+    ID_CONTEXT_HELP         "显示对按钮、菜单和窗口执行单击操作的帮助\n帮助"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Apre questo documento"
+    ID_FILE_MRU_FILE2       "Apre questo documento"
+    ID_FILE_MRU_FILE3       "Apre questo documento"
+    ID_FILE_MRU_FILE4       "Apre questo documento"
+    ID_FILE_MRU_FILE5       "Apre questo documento"
+    ID_FILE_MRU_FILE6       "Apre questo documento"
+    ID_FILE_MRU_FILE7       "Apre questo documento"
+    ID_FILE_MRU_FILE8       "Apre questo documento"
+    ID_FILE_MRU_FILE9       "Apre questo documento"
+    ID_FILE_MRU_FILE10      "Apre questo documento"
+    ID_FILE_MRU_FILE11      "Apre questo documento"
+    ID_FILE_MRU_FILE12      "Apre questo documento"
+    ID_FILE_MRU_FILE13      "Apre questo documento"
+    ID_FILE_MRU_FILE14      "Apre questo documento"
+    ID_FILE_MRU_FILE15      "Apre questo documento"
+    ID_FILE_MRU_FILE16      "Apre questo documento"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Passa al riquadro della finestra successivo\nRiquadro successivo"
+    ID_PREV_PANE            "Ritorna al riquadro della finestra precedente\nRiquadro precedente"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Divide la finestra attiva in riquadri\nDividi"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Cancella la selezione\nCancella"
+    ID_EDIT_CLEAR_ALL       "Cancella tutto\nCancella tutto"
+    ID_EDIT_COPY            "Copia la selezione e la pone negli Appunti\nCopy"
+    ID_EDIT_CUT             "Taglia la selezione e la pone negli Appunti\nCut"
+    ID_EDIT_FIND            "Trova il testo specificato\nTrova"
+    ID_EDIT_PASTE           "Inserisce il contenuto degli Appunti\nPaste"
+    ID_EDIT_REPEAT          "Ripete l'ultima azione\nRipeti"
+    ID_EDIT_REPLACE         "Sostituisce il testo specifico con un testo differente\nSostituisci"
+    ID_EDIT_SELECT_ALL      "Seleziona l'intero documento\nSeleziona tutto"
+    ID_EDIT_UNDO            "Annulla l'ultima azione\nAnnulla"
+    ID_EDIT_REDO            "Ripristina l'azione precedentemente annullata\nRipristina"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Mostra o nasconde la barra degli strumenti\nMostra/nascondi barra degli strumenti"
+    ID_VIEW_STATUS_BAR      "Mostra o nasconde la barra di stato\nMostra/nascondi barra di stato"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Modifica le dimensioni della finestra"
+    AFX_IDS_SCMOVE          "Modifica la posizione della finestra"
+    AFX_IDS_SCMINIMIZE      "Riduce la finestra ad icona"
+    AFX_IDS_SCMAXIMIZE      "Allarga la finestra a tutto schermo"
+    AFX_IDS_SCNEXTWINDOW    "Passa alla finestra successiva del documento "
+    AFX_IDS_SCPREVWINDOW    "Passa alla precedente finestra del documento"
+    AFX_IDS_SCCLOSE         "Chiude la finestra attiva e chiede di salvare i documenti"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Ripristina la finestra alle dimensioni normali"
+    AFX_IDS_SCTASKLIST      "Attiva l'Elenco dei task"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Chiude la modalità anteprima di stampa\n Annulla anteprima"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_GFX_SMALLICON        "显示小图标\n显示小图标"
+    ID_GFX_LARGEICON        "显示大图标\n显示大图标"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_QT                   "qt\nqt"
+    ID_EDHJ                 "二度化极\n二度化极"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_DIQIAN               "我还不知道呢"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_REVIEW_MAG           "由...提供\n由...提供"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_MY_FILE_OPEN         "fff\nddd"
+    ID_DRAW_EL              "椭圆\n椭圆"
+    ID_DRAW_LINE            "画直线\n直线"
+    ID_DRAW_RE              "矩形\n矩形"
+    ID_POINTER              "取消画笔\n取消画笔"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_EDIT1               "\n"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_COMBO1              "0--dt;1--dz\n0--dt;1--dz"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_GRAVITY_TYPE        "\n"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDOK                    "OK\nok"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_ABNORMAL_CACU        "异常计算\n计算布格重力异常"
+    ID_SUFFER_DRAW          "调用Suffer绘图\nSuffer"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_THREE_OP             "磁法三分量程序\n磁三分量"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+#ifdef _WIN32
+LANGUAGE 16, 1
+#pragma code_page(1252)
+#endif
+#include "res\OutBarDemo.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.ita\afxres.rc"          // Standard components
+#include "l.ita\afxprint.rc"        // printing/print preview resources
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

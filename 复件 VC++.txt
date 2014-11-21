@@ -1,0 +1,30 @@
+如何确定当前屏幕分辨率
+ 
+调用SDK函数GetSystemMetrics，该函数可以检索有关windows显示信息，诸如标题大小、边界大小以及滚动条大小等等。
+//Initialize CSize object with screen size.
+CSize sizeScreen (GetSystemMetrics (SM_CXSCREEN),
+ GetSystemMetrics (SM_CYSCREEN)) 
+
+改变对话框标题字体?
+ 
+怎样改变对话框标题文件的字体,改变资源中对话框属性中的字体,将改变所有的控件的字体, 却没有改变标题,但我只想改变标题字体,不改基余控件的属性.是不是我错过一些明显的选项. 通过查找一些MFC代码,我发现有一个CDialog模块,里面调用了一引起字体方法,但该对话框不是公用的,我相信它不会给我任何帮助.
+1).就我所知,对话框的标题字体和其它的窗口标题一样,它可以通过系统--显示器--属性--外观来设置,如果自己想这样做,我想你应该取得WM_NCPAINT句柄自己来画出非用户区域(包括标题在内),我从未做这样做过,可能是个错误的方向.
+2).如果你是在CView继承的,那你可以在构造函数中看见如下代码:
+if( !my_CFont .CreatePointFont( 180,"Helvetica",NULL ) )
+        return false;
+GetEditCtrl().SetFont( &my_CFont ,true )
+接下来如果你想改变在对话框中的一个CEdit控件字体时,可以使用以下代码:
+if( !my_CFont .CreatePointFont( 180,"Helvetica",NULL ) )
+        return false;
+( GetDlgItem (ID_ANY_CEDIT) ) ->SetFont( &my_CFont ); 
+
+
+如何使一个按钮Disable?
+ 
+我使用下面代码来Disable一个为ID_BUTTON的按钮,为什么会没有变化.
+GetDlgItem(IDC_BUTTON)->EnableWindow(FALSE);
+CWnd类中的EnableWindow函数用来Enable或Disable一个窗口类的对象,因为CButton类继承于类CWnd,所以你可以使用来操作一个按钮.Enable一个基于窗口类的对象可以用以下代码:
+      pWnd->EnableWindow(TRUE);
+Disable一个对象可用
+      pWnd->EnableWindow(FALSE);
+其中pWnd为一个指向窗口对象的指针VC++中消息WM_ENABLE告诉窗口它正在Disable或Enable,但它并不能使一个窗口Enable或Disable. 

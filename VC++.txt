@@ -1,0 +1,168 @@
+如何确定当前屏幕分辨率
+ 
+调用SDK函数GetSystemMetrics，该函数可以检索有关windows显示信息，诸如标题大小、边界大小以及滚动条大小等等。
+//Initialize CSize object with screen size.
+CSize sizeScreen (GetSystemMetrics (SM_CXSCREEN),
+ GetSystemMetrics (SM_CYSCREEN)) 
+
+改变对话框标题字体?
+ 
+怎样改变对话框标题文件的字体,改变资源中对话框属性中的字体,将改变所有的控件的字体, 却没有改变标题,但我只想改变标题字体,不改基余控件的属性.是不是我错过一些明显的选项. 通过查找一些MFC代码,我发现有一个CDialog模块,里面调用了一引起字体方法,但该对话框不是公用的,我相信它不会给我任何帮助.
+1).就我所知,对话框的标题字体和其它的窗口标题一样,它可以通过系统--显示器--属性--外观来设置,如果自己想这样做,我想你应该取得WM_NCPAINT句柄自己来画出非用户区域(包括标题在内),我从未做这样做过,可能是个错误的方向.
+2).如果你是在CView继承的,那你可以在构造函数中看见如下代码:
+if( !my_CFont .CreatePointFont( 180,"Helvetica",NULL ) )
+        return false;
+GetEditCtrl().SetFont( &my_CFont ,true )
+接下来如果你想改变在对话框中的一个CEdit控件字体时,可以使用以下代码:
+if( !my_CFont .CreatePointFont( 180,"Helvetica",NULL ) )
+        return false;
+( GetDlgItem (ID_ANY_CEDIT) ) ->SetFont( &my_CFont ); 
+
+
+如何使一个按钮Disable?
+ 
+我使用下面代码来Disable一个为ID_BUTTON的按钮,为什么会没有变化.
+GetDlgItem(IDC_BUTTON)->EnableWindow(FALSE);
+CWnd类中的EnableWindow函数用来Enable或Disable一个窗口类的对象,因为CButton类继承于类CWnd,所以你可以使用来操作一个按钮.Enable一个基于窗口类的对象可以用以下代码:
+      pWnd->EnableWindow(TRUE);
+Disable一个对象可用
+      pWnd->EnableWindow(FALSE);
+其中pWnd为一个指向窗口对象的指针VC++中消息WM_ENABLE告诉窗口它正在Disable或Enable,但它并不能使一个窗口Enable或Disable. 
+
+VC知识库（五）  www.vckbase.com  
+
+--------------------------------------------------------------------------------
+ 
+几个编程技巧  
+ 
+
+--------------------------------------------------------------------------------
+ 
+1:要生成平面工具栏是十分简单的。你只需要在CMainFrame的OnCreate()函数中添
+加一句话就可以(必须加在工具栏生成函数之后，因为MFC在生成工具栏时，要清除
+其式样)
+int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct) 
+{ 　　if(!m_wndToolBar.Create(this) 
+　　//!m_wndToolBar.LoadToolBar(IDR_MAINFRAME)) 
+　　 { 
+　　 TRACE0("Failed to create toolbar\n"); 
+　　 return -1; // fail to create 
+　　 } 
+　　m_wndToolBar.ModifyStyle(0,TBSTYLE_FLAT);}//设置工具栏为平面格式 
+
+　2:从窗口中删除了极大按钮并设置了初始位置和大小：
+　BOOL CMainFrame::PreCreateWindow(CREATESTRUCT& cs)
+{cs.style = WS_OVERLAPPED | WS_SYSMENU | WS_BORDER;
+    // Set the position of the window to the upper -left corner.
+cs.x =cs. y =0;
+//Set the width and height of the window .
+cs. cx=GetSystemMetrics (SM_CXSCREEN);
+cs. cy=GetSystemMetrics (SM_CYSCREEN) /2;
+return CFrameWnd::PreCreateWindow(cs);}　
+3:用户可以在代码的任何地方调用Cwnd::ShowWindow将窗口设置为极大或极小。
+BOOL CSampleApp : : InitInstance ( )
+{ 
+pMainWnd ->Show Window (SW_SHOWMINMIZED或者SW_SHOWMAXIMIZED);}
+4:如何移动窗口 
+调用CWnd : : SetWindowPos并指定SWP_NOSIZE标志。目的位置与父窗口有关
+（顶层窗口与屏幕有关）。调用CWnd : : MoveWindow时必须要指定窗口的大小。
+//Move window to positoin 100 , 100 of its parent window .
+SetWindowPos (NULL, 100 , 100 , 0 , 0 , SWP_NOSIZE ｜SWP_NOACTIVATE);
+5:如何改变视窗的背景颜色
+Windows向窗口发送一个WM_ERASEBKGND消息通知该窗口擦除背景，可以使用
+ClassWizard重载该消息的缺省处理程序来擦除背景（实际是画），并返回TRUE以
+防止Windows擦除窗口。 
+BOOL CBoxView::OnEraseBkgnd(CDC* pDC) 
+{CBrush brush(RGB (128 , 0 , 128) );
+// Select the brush into the device context .
+CBrush* pOldBrush = pDC->SelectObject (&brush);.
+CRect rcClip ;
+pDC->GetClipBox (&rcClip);//Paint the area.
+pDC-> PatBlt (rcClip.left , rcClip.top ,rcClip.Width() , rcClip.Height() ,PATCOPY );
+pDC->SelectObject (pOldBrush );
+return TRUE;}
+
+                   
+
+1、取得系统时间
+方法:
+SYSTEMTIME systime;
+::GetSystemTime(&systime);
+CTime time(systime);
+
+2、在程序中添加ODBC数据源
+方法:使用SQLConfigDataSource函数。例如：
+SQLConfigDataSource(NULL,ODBC_ADD_DSN,
+(LPSTR)"SQL Server",
+(LPSTR)"DSN=medicine1998\0"
+"SERVER=DEC\0"
+"DATABASE=medicine1998\0"))//添加一个ODBC数据源，其类型为
+//SQL Server，服务器为DEC，名字为medicine1998，数据库为medicine1998
+
+3、在Visual C++中使用DBGrid控件的方法
+（1）、插入一个MicrosoftRemoteData控件；
+（2）、设定其DataSource为所需要的ODBC数据源；
+（3）、设定用户名和密码；
+（4）、写入SQL查询语句；
+（5）、插入一个DBGrid控件；
+（6）、设定为绑定方式；
+（7）、设定其绑定的数据源为前面插入的MicrosoftRemoteData控件的ID；
+（8）、由于只能修改前两列的列头显示（至少我不知道如何去修改第3列），所以为了重新设定每一列的列头显示，同时也是为了指定显示的列，应该修改前面MicrosoftRemoteData控件中的查询语句，指定获取列和更改列名，例如：select name as 姓名,phone as 电话 from address。此语句就是从表address中选取name和phone两列，并指定了显示的列名为“姓名”和“电话”。
+
+4、去掉在主窗口标题上显示"Untitled - MyApp."
+方法一：重载CDocument的虚函数"SetTitle"：
+void CMyDoc::SetTitle(LPCTSTR lpszTitle) 
+{
+CDocument::SetTitle("MyTitle");
+}
+*这个方法是将标题改为"MyTitle - MyApp"
+方法二：在程序中的任何位置调用下面的函数：
+(AfxGetMainWnd( ))->SetWindowText("MyApp");
+*这个方法是将标题改为"MyApp"，但是每当一个文档对象被创建时，MFC就会加上文档名
+方法三：重载CFrameWnd的虚函数"OnUpdateFrameTitle"
+void CMainFrame::OnUpdateFrameTitle(BOOL Nada) 
+{
+// get app name from string table resource
+//----------------------------------------
+CString csAppName;
+csAppName.Format(AFX_IDS_APP_TITLE); 
+// Set caption of main frame window
+//---------------------------------
+SetWindowText(csAppName);
+}
+*注意，在微软的联机帮助中是找不到这个函数的，在新的版本中也可能不支持这个函数，所以要慎用
+方法四：最好的和最安全的方法，就是改写窗口的属性
+BOOL CMainFrame::PreCreateWindow(CREATESTRUCT& cs)
+{
+cs.style &= ~(LONG) FWS_ADDTOTITLE;
+
+return CFrameWnd::PreCreateWindow(cs);
+}
+
+5、在ODBC编程中，在过滤器中可以用参数取代过滤字符串，以便在运行时动态改变过滤器，但是该参数必须用如下方法声明：
+（1）在记录集的定义中添加成员参数：
+class CStudentSet : public CRecordset
+{
+// Field/Param Data
+//{{AFX_FIELD(CStudentSet, CRecordset)
+CString m_strFirstName;
+CString m_strLastName;
+CString m_strStudentID;
+CString m_strGradYear;
+//}}AFX_FIELD
+
+CString m_strGradYrParam; //成员参数
+};
+（2）改变在CPP文件中的DoFieldExchange成员函数，并且对每一个你添加在类中的成员参数都调用一次RFX函数，如下：
+pFX->SetFieldType( CFieldExchange::param );//指示以下给出的是参数绑定
+// RFX calls for parameter data members
+//在此处加入RFX调用：，例如：
+pFX->RFX_Text(pFX,"bookname", m_strGradYrParam);
+*其中，bookname是要在其上添加参数的列名，后面是参数名。
+（3）在你的recordset类的构建函数中，增加反映参数个数的m_nParams成员变量的值。
+（4）然后可以在你的SQL过滤串中以？代替可变过滤参数了，这种对应是一一对应的，即？的顺序要严格遵守RFX调用的顺序。然后给出过滤参数的值，就可以用此值代替？了。注意，该过滤参数的值一定要在数据源打开之前给定。 
+ 
+ 
+ 
+ 
+ 

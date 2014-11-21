@@ -1,0 +1,19 @@
+
+	// OutBarDemo.idl : IDL source for OutBarDemo.exe
+//
+// This file will be processed by the MIDL tool to
+// produce the type library (OutBarDemo.tlb) and marshalling code.
+import "oaidl.idl";
+import "ocidl.idl";
+[
+	uuid(A4CE60DC-6CDF-4ED0-B072-60A85E6F7937),
+	version(1.0),
+	helpstring("OutBarDemo 1.0 Type Library")
+]
+library OutBarDemoLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+};
+
+	
